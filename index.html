@@ -3,10 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Vane</title>
+    <meta name="description" content="Course Home Page">
+    <meta name="author" content="Vanessa Sutherland">
+    <title>Course Home Page</title>
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <img src="images/vane.webp" alt="personal picture" width="150">
+        <span>Vanessa Sutherland</span>
+    </header>
+    <nav>
+        <button id="hamburger-menu">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Chamber</a></li>
+            <li><a href="">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/vanesutherland">Linkedin</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section class="card-left">
+            <h2>Course Work</h2>
+            <p></p>
+        </section>
+        <section class="card-right">
+            <h2>Santiago, Chile</h2>
+            <figure>
+                <img src="images/chile.webp" alt="Flag of Chile">
+                <figcaption>Flag of Chile</figcaption>
+            </figure>
+        </section>
+        <section class="card-bottom">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="show-all">All Courses</button>
+                <button id="show-wdd">WDD Courses</button>
+                <button id="show-cse">CSE Courses</button>
+            </div>
+            <p id="total-credits-paragraph">Total Credits: <span id="total-credits">0</span></p>
+            <div id="course-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span>| Vanessa Sutherland | Chile</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
