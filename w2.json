@@ -1,0 +1,23 @@
+{
+    "family_name": "Herrera",
+    "move_in_date": "2025-02-12",
+    "number_of_people": 3,
+    "visited_by_bishopric": true,
+    "family_members": [
+        {
+            "name": "Belen Herrera",
+            "gender": "Female",
+            "birthdate": "2000-06-23"
+        },
+        {
+            "name": "Matias Herrera",
+            "gender": "Male",
+            "birthdate": "1998-08-12"
+        },
+        {
+            "name": "Nicolas Herrera",
+            "gender": "Male",
+            "birthdate": "2010-12-3"
+        }
+    ]
+}
