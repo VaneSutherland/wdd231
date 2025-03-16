@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    max-width: 100%;
+
+}
+
+header {
+    background-color: #313715;
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    justify-content: center;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #a5ae9e;
+    color: black;
+    padding: 10px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    gap: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+nav ul li a:visited {
+    color: white;
+}
+
+nav ul li a:hover {
+    color: #575757;
+}
+
+nav button {
+    display: none;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: lighter;
+    margin-left: 15px;
+}
+
+.button-container {
+    display: flex;  
+    gap: 10px;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#grid-view, #list-view {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+#grid-view img, #list-view img {
+    width: 30px; 
+    height: 30px;
+    margin-top: 45px;
+}
+
+#cards {
+    padding: 50px;
+}
+
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: black;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 10px; 
+}
+
+.card img {
+    width: 100%;  
+    height: 100px;  
+    object-fit: contain; 
+    border-radius: 5px;  
+    margin-bottom: 50px; 
+}
+
+.card p {
+    margin: 10px;
+}
+
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 65px; 
+    justify-content: center;
+}
+
+.list-view .card {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 20px; 
+    width: 100%; 
+    padding: 20px; 
+}
+
+
+.list-view .card h3 {
+    font-size: 20px; 
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.list-view .card img {
+    display: none;
+}
+
+
+.list-view .card p {
+    margin-top: 0;
+    text-align: left; 
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+    background-color: #313715;
+    color: white;
+}
+
+footer .information {
+    text-align: left;
+    margin-left: 50px;
+}
+
+footer .social {
+    text-align: center;
+}
+
+footer .personal {
+    text-align: right;
+    margin-right: 50px;
+
+}
+
+footer .social a {
+    margin: 0 10px; 
+}
+
+footer img {
+    width: 40px;
+    height: auto;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}

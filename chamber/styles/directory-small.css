@@ -1,0 +1,52 @@
+@media (max-width: 320px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    main {
+        display: block;
+    }
+
+    nav button {
+        display: block;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: none;
+        list-style: none;
+        padding: 0px;
+        text-align: center;
+        gap: 0;
+    }
+
+    nav.show ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .card p {
+        margin: 0px;
+    }
+}
