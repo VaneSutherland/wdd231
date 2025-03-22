@@ -49,4 +49,42 @@
     .card p {
         margin: 0px;
     }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .content-grid h2{
+        font-size: 16px;
+    }
+    .content-grid p{
+        font-size: 14px;
+    }
+    .events,
+    .weather,
+    .forecast {
+        height: auto;
+    }
+
+    .spotlight-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: auto;
+    }
+
+    footer{
+        font-size: 8px;
+    }
+
+    footer .information {
+        margin-left: 0px;
+    }
+    footer .personal {
+        margin-right: 0px;
+    
+    }
+
+    .social img {
+        width: 20px;
+        height: 20px;
+    }
 }

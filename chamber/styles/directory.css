@@ -19,10 +19,8 @@ header {
 }
 
 nav {
-    background-color: #a5ae9e;
-    color: black;
+    background-color: #5e754d;
     padding: 10px;
-
 }
 
 nav ul {
@@ -34,16 +32,18 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
     font-size: 20px;
-}
-
-nav ul li a:visited {
+    font-weight: bold;
     color: white;
 }
 
+
+nav ul li a:visited {
+    color: rgb(255, 255, 255);
+}
+
 nav ul li a:hover {
-    color: #575757;
+    color: black;
 }
 
 nav button {
@@ -55,98 +55,9 @@ h1 {
     font-weight: lighter;
     margin-left: 15px;
 }
-
-.button-container {
-    display: flex;  
-    gap: 10px;
-    justify-content: center; 
-    align-items: center; 
-}
-
-#grid-view, #list-view {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-}
-
-#grid-view img, #list-view img {
-    width: 30px; 
-    height: 30px;
-    margin-top: 45px;
-}
-
-#cards {
-    padding: 50px;
-}
-
-
-.card {
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    margin: 10px; 
-}
-
-.card img {
-    width: 100%;  
-    height: 100px;  
-    object-fit: contain; 
-    border-radius: 5px;  
-    margin-bottom: 50px; 
-}
-
-.card p {
-    margin: 10px;
-}
-
-.grid-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 65px; 
-    justify-content: center;
-}
-
-.list-view .card {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: flex-start;
-    gap: 20px; 
-    width: 100%; 
-    padding: 20px; 
-}
-
-
-.list-view .card h3 {
-    font-size: 20px; 
-    margin-top: 25px;
-    text-align: center;
-    width: 100%;
-}
-
-
-.list-view .card img {
-    display: none;
-}
-
-
-.list-view .card p {
-    margin-top: 0;
-    text-align: left; 
-    width: 100%;
-}
-
 footer {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: #313715;
@@ -169,16 +80,238 @@ footer .personal {
 }
 
 footer .social a {
-    margin: 0 10px; 
+    margin: 0 10px;
 }
 
-footer img {
-    width: 40px;
-    height: auto;
-}
 
 .social img {
     width: 30px;
     height: 30px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
 }
+
+/*directory*/
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-view,
+#list-view {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid-view img,
+#list-view img {
+    width: 30px;
+    height: 30px;
+    margin-top: 45px;
+}
+
+#cards {
+    padding: 50px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.card p {
+    margin: 10px;
+}
+
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 65px;
+    justify-content: center;
+}
+
+.list-view .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.list-view .card h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.list-view .card img {
+    display: none;
+}
+
+
+.list-view .card p {
+    margin-top: 0;
+    text-align: left;
+    width: 100%;
+}
+
+
+/*index*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .cta {
+    position: absolute;
+    top: 85%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.hero .cta a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.hero .cta a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+.weather,
+.forecast,
+.events {
+    background: #f4f4f4;
+    padding: 0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 100%;
+    line-height: 1.5;
+}
+
+
+.content-grid h2 {
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: block;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+#weather-icon {
+    width: 120px;
+    height: auto;
+}
+
+figcaption {
+    display: none;
+}
+
+
+.forecast p{
+    font-size: 22px;
+    line-height: 2;
+    margin-left: 100px;
+}
+
+#spotlight-section {
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+.spotlight-card {
+    background-color: #f4f4f4;
+    padding: 35px;
+    margin: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+}
+
+.spotlight-card img {
+    width: 2auto;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.spotlight-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.spotlight-card p {
+    margin: 5px 0;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.spotlight-card a {
+    color: black;
+    text-decoration: none;
+}
+

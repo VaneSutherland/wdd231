@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/directory-small.css">
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
     <script src="scripts/members.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,20 +39,40 @@
         </ul>
     </nav>
     <main>
-        <h1>Concon Chamber of Commerce</h1>
+        <section class="hero">
+            <img src="images/concon.webp" alt="concon">
+            <div class="cta">
+                <a href="">Join today</a>
+            </div>
+        </section>
 
-        <div class="button-container">
-            <button id="grid-view">
-                <img src="images/grid.svg" alt="grid">
-            </button>
+        <h1>Home</h1>
 
-            <button id="list-view">
-                <img src="images/card-list.svg" alt="list">
-            </button>
+        <div class="content-grid">
+            <section class="events">
+                <h2>Upcoming Events</h2>
+            </section>
+
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <div class="weather-info">
+                    <figure>
+                        <img id="weather-icon" src="" alt="weather-icon">
+                        <figcaption></figcaption>
+                    </figure>
+                    <p><span id="current-temp"></span></p>
+                </div>
+            </section>
+            </section>
+
+            <section class="forecast">
+                <h2>Weather Forecast</h2>
+                <div id="forecast"></div>
+            </section>
         </div>
 
-        <section class="cards">
-            <div id="cards"></div>
+        <section class="spotlight-section">
+            <div id="spotlight-container"></div>
         </section>
 
     </main>
