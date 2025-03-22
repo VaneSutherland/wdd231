@@ -54,7 +54,7 @@ function displayResults(data) {
 
     const forecastHTML = `
       <div class="forecast-card">
-        <p><strong>${index === 0 ? "Today" : dayOfWeek}</strong></p> <!-- Días en negrita -->
+        <p><strong>${index === 0 ? "Today" : dayOfWeek}</strong></p>
         <p>${temp}&deg;F</p>
       </div>
     `;
@@ -66,11 +66,9 @@ function getForecastForNextDays(data) {
   const today = new Date();
   const tomorrow = new Date(today);
   const dayAfterTomorrow = new Date(today);
-  const thirdDay = new Date(today);
 
   tomorrow.setDate(today.getDate() + 1);
   dayAfterTomorrow.setDate(today.getDate() + 2);
-  thirdDay.setDate(today.getDate() + 3);
 
   const forecastData = [];
 
@@ -83,16 +81,13 @@ function getForecastForNextDays(data) {
       forecastData.push(item);
     } else if (isSameDay(itemDate, dayAfterTomorrow)) {
       forecastData.push(item);
-    } else if (isSameDay(itemDate, thirdDay)) {
-      forecastData.push(item);
-    }
+    } 
   });
 
   const uniqueForecastData = [];
   uniqueForecastData.push(forecastData[0]);
   uniqueForecastData.push(forecastData[8]);
   uniqueForecastData.push(forecastData[16]); 
-  uniqueForecastData.push(forecastData[24]); 
   return uniqueForecastData;
 }
 

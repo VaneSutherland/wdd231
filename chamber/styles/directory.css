@@ -64,6 +64,10 @@ footer {
     color: white;
 }
 
+footer h2{
+    display: none;
+}
+
 footer .information {
     text-align: left;
     margin-left: 50px;
@@ -185,6 +189,9 @@ footer .social a {
     width: 100%;
     height: 50vh;
 }
+ .hero h2{
+    display: none;
+ }
 
 .hero img {
     width: 100%;
@@ -281,6 +288,10 @@ figcaption {
     margin-top: 20px;
 }
 
+.spotlight-section h2 {
+    display: none;
+}
+
 .spotlight-card {
     background-color: #f4f4f4;
     padding: 35px;
@@ -294,7 +305,7 @@ figcaption {
 }
 
 .spotlight-card img {
-    width: 2auto;
+    width: auto;
     height: 60px;
     margin-bottom: 10px;
 }
