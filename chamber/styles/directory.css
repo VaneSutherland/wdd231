@@ -55,6 +55,7 @@ h1 {
     font-weight: lighter;
     margin-left: 15px;
 }
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -64,7 +65,7 @@ footer {
     color: white;
 }
 
-footer h2{
+footer h2 {
     display: none;
 }
 
@@ -189,9 +190,10 @@ footer .social a {
     width: 100%;
     height: 50vh;
 }
- .hero h2{
+
+.hero h2 {
     display: none;
- }
+}
 
 .hero img {
     width: 100%;
@@ -277,7 +279,7 @@ figcaption {
 }
 
 
-.forecast p{
+.forecast p {
     font-size: 22px;
     line-height: 2;
     margin-left: 100px;
@@ -326,3 +328,208 @@ figcaption {
     text-decoration: none;
 }
 
+
+/*join*/
+
+.membershipApp {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 250px;
+
+}
+
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.membership-cards .card {
+    width: 450px;
+    height: 150px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    gap: 20px;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.membership-cards .card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.membership-cards .card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.membership-cards .card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.membership-cards .card:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.membership-cards .card:nth-child(2) {
+    background: linear-gradient(135deg, #1E3C72, #2A5298);
+}
+
+.membership-cards .card:nth-child(3) {
+    background: linear-gradient(135deg, #8B4513, #CD7F32);
+}
+
+.membership-cards .card:nth-child(4) {
+    background: linear-gradient(135deg, #C0C0C0, #E0E0E0);
+}
+
+.membership-cards .card:nth-child(5) {
+    background: linear-gradient(135deg, #FFD700, #DAA520);
+}
+
+.membership-cards .card {
+    animation: fadeInUp 1s ease-out forwards, glow 3s infinite alternate ease-in-out;
+}
+
+.membership-cards .card button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.membership-cards .card button:hover {
+    background-color: rgba(0, 0, 0, 1);
+    transform: scale(1.05);
+}
+
+.membership-cards .card button:active {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: scale(0.95);
+}
+
+
+.designOne {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.designOne label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.designOne input,
+.designOne select,
+.designOne textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.designOne input[type="submit"] {
+    background-color: #313715;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}
+
+.designOne input[type="submit"]:hover {
+    background-color: #5e754d;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 400px;
+}
+
+#closeButton {
+    display: block;
+    margin: 15px auto 0;
+    background-color: #313715;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#closeButton:hover {
+    background-color: #5e754d;
+}
+
+
+#results {
+    margin: 10px;
+    display: grid;
+    justify-content: center;
+    padding: 100px;
+}
+
+#results h2 {
+    font-size: 45px;
+    margin-bottom: 35px;
+
+}
+
+#results p {
+    font-size: 95x;
+    margin: 10px;
+}

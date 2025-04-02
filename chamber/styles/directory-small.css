@@ -87,4 +87,20 @@
         width: 20px;
         height: 20px;
     }
+    .membershipApp {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        gap: 25px;
+    
+    }
+
+    .designOne {
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
 }

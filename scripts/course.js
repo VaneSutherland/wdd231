@@ -81,17 +81,46 @@ const courses = [
 document.addEventListener("DOMContentLoaded", () => {
     const courseList = document.getElementById("course-list");
     const totalCreditsSpan = document.getElementById("total-credits");
+    const courseDetails = document.getElementById("course-details");
 
-    
     const btnAll = document.getElementById("show-all");
     const btnWDD = document.getElementById("show-wdd");
     const btnCSE = document.getElementById("show-cse");
 
+    function displayCourseDetails(course) {
+        courseDetails.innerHTML = "";
+        courseDetails.innerHTML = `
+            <button id="closeModal">❌</button>
+            <h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+            <p><strong>Credits</strong>: ${course.credits}</p>
+            <p><strong>Certificate</strong>: ${course.certificate}</p>
+            <p><strong>Description</strong>: ${course.description}</p>
+            <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+        `;
     
+
+        courseDetails.style.display = 'block'; 
+        courseDetails.showModal();
+
+        const closeModal = document.getElementById("closeModal");
+
+        closeModal.addEventListener("click", () => {
+            courseDetails.close();
+            courseDetails.style.display = 'none';
+            });
+
+        courseDetails.addEventListener("click", (event) => {
+            if (event.target === courseDetails) { 
+                courseDetails.close();
+                courseDetails.style.display = 'none';
+            }
+        });
+    }
+
     function displayCourses(filter = "all") {
         courseList.innerHTML = "";
 
-        
         let filteredCourses = courses;
         if (filter === "WDD") {
             filteredCourses = courses.filter(course => course.subject === "WDD");
@@ -104,11 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredCourses.forEach(course => {
             totalCredits += course.credits;
 
-            
             const courseCard = document.createElement("div");
             courseCard.classList.add("course-card");
 
-            
             if (course.completed) {
                 courseCard.classList.add("completed");
             }
@@ -117,17 +144,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h3>${course.subject} ${course.number} - ${course.title}</h3>
             `;
 
+            courseCard.addEventListener("click", () => {
+                displayCourseDetails(course);
+            });
+
             courseList.appendChild(courseCard);
         });
 
-        
         totalCreditsSpan.textContent = totalCredits;
     }
 
-    
     displayCourses();
 
-    
     btnAll.addEventListener("click", () => displayCourses("all"));
     btnWDD.addEventListener("click", () => displayCourses("WDD"));
     btnCSE.addEventListener("click", () => displayCourses("CSE"));

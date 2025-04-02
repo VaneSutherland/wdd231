@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/directory-small.css">
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
     <script src="scripts/members.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -37,25 +40,11 @@
         </ul>
     </nav>
     <main>
-        <h1>Concon Chamber of Commerce</h1>
-
-        <div class="button-container">
-            <button id="grid-view">
-                <img src="images/grid.svg" alt="grid">
-            </button>
-
-            <button id="list-view">
-                <img src="images/card-list.svg" alt="list">
-            </button>
-        </div>
-
-        <section class="cards">
-            <div id="cards"></div>
-        </section>
-
+        <div id="results"></div>
     </main>
     <footer>
         <section class="information">
+            <h2>Information</h2>
             <p>Concon Chamber of Commerce</p>
             <p>453 Independence</p>
             <p>info@chambercomm.org</p>
@@ -63,18 +52,23 @@
 
         </section>
         <section class="social">
+            <h2>Social Media</h2>
             <a href="#"><img src="images/youtube.svg" alt="youtube icon"></a>
             <a href="#"><img src="images/linkedin.svg" alt="linkedin icon"></a>
             <a href="#"><img src="images/whatsapp.svg" alt="whatsapp icon"></a>
         </section>
 
         <section class="personal">
+            <h2>Information</h2>
             <p>WDD231 Class Project</p>
             <p>Vanessa Sutherland</p>
             <p>&copy; <span id="currentyear"></span>Concon Chamber of Commerce</p>
             <p id="lastModified"></p>
         </section>
     </footer>
+    <script src="scripts/join.js"></script>    
+    <script src="scripts/thanks.js"></script>
+
 </body>
 
 </html>
