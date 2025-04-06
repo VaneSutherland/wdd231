@@ -103,4 +103,18 @@
         margin-right: 20px;
 
     }
+
+    .discover img.card-image {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        grid-column: 1;
+        border-radius: 8px;
+    }
+    
+    /* Efecto hover: aumenta el tamaño de la imagen y oscurece */
+    .discover img.card-image:hover {
+        transform: scale(1); 
+        filter: brightness(1); /* Oscurece la imagen */
+    }
 }

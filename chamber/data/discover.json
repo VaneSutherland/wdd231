@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Oceanview Oasis Hotel",
+        "address": "Borgoño 123, Concon, Chile",
+        "description": "A luxurious oceanfront hotel offering comfort and breathtaking views of the Pacific. With spacious rooms, a world-class spa, and exquisite dining.",
+        "image": "images/hotel.webp"
+    },
+    {
+        "title": "The Flavor Corner Café",
+        "address": "Av costanera 456, Concon, Chile",
+        "description": "Nestled in the heart of Concon, The Flavor Corner is a chic café offering gourmet coffee, pastries, and an inviting atmosphere.",
+        "image": "images/tables.webp"
+    },
+    {
+        "title": "The Wave Surf Beach",
+        "address": "Av. Concon 789, Concon, Chile",
+        "description": "The Wave Surf Beach is the ultimate destination for surfers, with some of the best waves in Chile.",
+        "image": "images/surf.webp"
+    },
+    {
+        "title": "Seaview  Restaurant",
+        "address": "Punta de Concon 101, Concon, Chile",
+        "description": "With stunning ocean views, Seaview Mirador Restaurant serves fresh seafood and local dishes in a seaside setting.",
+        "image": "images/restaurant.webp"
+    },
+    {
+        "title": "Underwater Adventures",
+        "address": "Playa Amarilla 202, Concon, Chile",
+        "description": "Dive into an underwater adventure at Underwater Adventures Dive Center. With expert instructors and various courses, this center offers everything from beginner lessons to advanced.",
+        "image": "images/dive.webp"
+    },
+    {
+        "title": "Sea Market",
+        "address": "Av. Los Pescadores 303, Concon, Chile",
+        "description": "Sea Market is a vibrant seafood market with the freshest catches of the day. From fish and shellfish to ocean delicacies, this market offers marine treasures.",
+        "image": "images/seafood.webp"
+    },
+    {
+        "title": "Wind Theater",
+        "address": "El Salto 404, Concon, Chile",
+        "description": "Wind Theater is a cultural venue offering live performances like music, theater, and dance. Attend a play, concert, or dance for an unforgettable experience.",
+        "image": "images/theater.webp"
+    },
+    {
+        "title": "Sun & Sea Resort",
+        "address": "Av. del Mar 505, Concon, Chile",
+        "description": "Sun & Sea Resort is a luxurious beach destination offering relaxation and adventure. Whether relaxing on the sands or exploring activities, Sun & Sea is the perfect getaway.",
+        "image": "images/beach.webp"
+    }
+]
+
+

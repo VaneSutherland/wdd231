@@ -1,0 +1,58 @@
+/* Global Styles */
+body {
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text for readability */
+    font-family: 'Arial', sans-serif; /* Base font for the site */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #005b96; /* Blue color for main headings */
+    margin-bottom: 0.5em;
+}
+
+/* Section Titles */
+h2 {
+    color: #f57c00; /* Orange color for subtitles */
+}
+
+/* General Section Styles */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Link Styles */
+a {
+    color: #005b96;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #005b96;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

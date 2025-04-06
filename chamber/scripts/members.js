@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const members = await response.json();
             displayMembers(members);
         } catch (error) {
-            console.error("Error cargando los miembros:", error);
+            console.error("error", error);
         }
     };
 

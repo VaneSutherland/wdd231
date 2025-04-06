@@ -12,7 +12,7 @@
     <script src="scripts/date.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
-    <script src="scripts/members.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,9 +39,15 @@
             <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
-    <main>
-        <div id="results"></div>
+    <main class="discover">
+        <section class="cards">
+            <div id="cards"></div>
+        </section>
+
     </main>
+    <aside id="sidebar">
+        <div id="visitMessage"></div>
+    </aside>
     <footer>
         <section class="information">
             <h2>Information</h2>
@@ -58,6 +64,7 @@
             <a href="#"><img src="images/whatsapp.svg" alt="whatsapp icon"></a>
         </section>
 
+
         <section class="personal">
             <h2>Information</h2>
             <p>WDD231 Class Project</p>
@@ -66,9 +73,6 @@
             <p id="lastModified"></p>
         </section>
     </footer>
-    <script src="scripts/join.js"></script>    
-    <script src="scripts/thanks.js"></script>
-
 </body>
 
 </html>
