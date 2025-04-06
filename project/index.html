@@ -1,31 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recetas por Dieta</title>
-  <link rel="stylesheet" href="styles/styles.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project web page">
+    <meta name="author" content="Vanessa Sutherland">
+    <title>Nourishing Recipes: Eat Well, Feel Great</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
+  <header>
+    <h1>Nourishing Recipes: Eat Well, Feel Great</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="share.html">Submit Your Recipe</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
 
-  <h1>Encuentra Recetas por Tipo de Dieta</h1>
-  
-  <!-- Dropdown para elegir el tipo de dieta -->
-  <label for="diet-type">Selecciona el tipo de dieta:</label>
-  <select id="diet-type" name="diet-type">
-    <option value="">Mostrar todas</option> <!-- Opción para mostrar todas las recetas -->
-    <option value="vegetarian">Vegetariana</option>
-    <option value="vegan">Vegana</option>
-    <option value="glutenFree">Sin gluten</option>
-    <option value="lowCarb">Baja en carbohidratos</option>
-    <option value="keto">Cetogénica</option>
-  </select>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Contenedor donde se mostrarán las recetas -->
-  <div id="recipes-container"></div>
+  <main>
+    <section id="random-recipes">
+      <h2>Random Recipes</h2>
+      <div id="recipes-container"></div>
+    </section>
 
-  <script src="srcipts/app.js"></script>
+    <section id="submit-recipe">
+      <h2>Want to Share Your Recipe?</h2>
+      <p>We love new recipes! If you have a delicious recipe you'd like to share, click below to submit it:</p>
+      <a href="share.html">Submit Recipe</a>
+    </section>
+
+    <section id="recipe-tips">
+      <h2>Recipe Tips & Tricks</h2>
+      <ul>
+        <li><strong>Tip 1:</strong> Always use fresh ingredients for the best flavor.</li>
+        <li><strong>Tip 2:</strong> Don't forget to season your dish properly for that extra kick!</li>
+        <li><strong>Tip 3:</strong> Experiment with different herbs and spices to add variety.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Recipe Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="srcipts/index.js"></script>
 </body>
 </html>
-
-

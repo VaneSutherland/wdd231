@@ -1,15 +1,13 @@
-// app.js
-
-const apiKey = "8952d82182834605b759aed8e9711552"; // Reemplaza con tu propia API Key
-const apiUrl = "https://api.spoonacular.com/recipes/random"; // Endpoint para recetas aleatorias
+const apiKey = "8952d82182834605b759aed8e9711552";
+const apiUrl = "https://api.spoonacular.com/recipes/random";
 
 document.addEventListener("DOMContentLoaded", function () {
   fetchRandomRecipes();
 });
 
-// Función para obtener recetas aleatorias
+
 function fetchRandomRecipes() {
-  const url = `${apiUrl}?apiKey=${apiKey}&number=3`; // Obtener 3 recetas aleatorias
+  const url = `${apiUrl}?apiKey=${apiKey}&number=3`;
 
   fetch(url)
     .then(response => response.json())
@@ -23,10 +21,9 @@ function fetchRandomRecipes() {
     });
 }
 
-// Función para mostrar las recetas aleatorias
 function displayRandomRecipes(recipes) {
   const recipesContainer = document.getElementById("recipes-container");
-  recipesContainer.innerHTML = ""; // Limpiar contenido previo
+  recipesContainer.innerHTML = ""; 
 
   recipes.forEach(recipe => {
     const recipeElement = document.createElement("div");

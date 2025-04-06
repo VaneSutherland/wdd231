@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project web page">
+  <meta name="author" content="Vanessa Sutherland">
+  <title>Site Plan: Nourishing Recipes: Eat Well, Feel Great</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+<body>
+
+  <h1>Encuentra Recetas por Tipo de Dieta</h1>
+  
+  <!-- Dropdown para elegir el tipo de dieta -->
+  <label for="diet-type">Selecciona el tipo de dieta:</label>
+  <select id="diet-type" name="diet-type">
+    <option value="">Mostrar todas</option> <!-- Opción para mostrar todas las recetas -->
+    <option value="vegetarian">Vegetariana</option>
+    <option value="vegan">Vegana</option>
+    <option value="glutenFree">Sin gluten</option>
+    <option value="lowCarb">Baja en carbohidratos</option>
+    <option value="keto">Cetogénica</option>
+  </select>
+
+  <!-- Contenedor donde se mostrarán las recetas -->
+  <div id="recipes-container"></div>
+
+  <script src="srcipts/app.js"></script>
+</body>
+</html>
+
+
