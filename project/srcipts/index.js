@@ -1,13 +1,12 @@
-const apiKey = "8952d82182834605b759aed8e9711552";
-const apiUrl = "https://api.spoonacular.com/recipes/random";
+window.apiKey = "8952d82182834605b759aed8e9711552";
+const apiUrlRandom = "https://api.spoonacular.com/recipes/random";
 
 document.addEventListener("DOMContentLoaded", function () {
   fetchRandomRecipes();
 });
 
-
 function fetchRandomRecipes() {
-  const url = `${apiUrl}?apiKey=${apiKey}&number=3`;
+  const url = `${apiUrlRandom}?apiKey=${window.apiKey}&number=3`; 
 
   fetch(url)
     .then(response => response.json())
@@ -16,14 +15,14 @@ function fetchRandomRecipes() {
     })
     .catch(error => {
       console.error("Error fetching random recipes:", error);
-      const recipesContainer = document.getElementById("recipes-container");
+      const recipesContainer = document.getElementById("random");
       recipesContainer.innerHTML = "Could not load random recipes. Please try again later.";
     });
 }
 
 function displayRandomRecipes(recipes) {
-  const recipesContainer = document.getElementById("recipes-container");
-  recipesContainer.innerHTML = ""; 
+  const recipesContainer = document.getElementById("random");
+  recipesContainer.innerHTML = "";
 
   recipes.forEach(recipe => {
     const recipeElement = document.createElement("div");
@@ -39,3 +38,20 @@ function displayRandomRecipes(recipes) {
     recipesContainer.appendChild(recipeElement);
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerButton = document.getElementById('hamburger-menu');
+  const navMenu = document.querySelector('nav');
+
+  if (hamburgerButton) {
+    hamburgerButton.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+
+      if (hamburgerButton.textContent === '☰') {
+        hamburgerButton.textContent = '✖';
+      } else {
+        hamburgerButton.textContent = '☰';
+      }
+    });
+  }
+})

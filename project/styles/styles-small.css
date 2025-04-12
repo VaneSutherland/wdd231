@@ -1,0 +1,221 @@
+@media (max-width: 320px) {
+
+
+    header {
+        flex-direction: column ;
+        font-size: 25px;
+    }
+
+
+    main {
+        display: block;
+    }
+    nav button {
+        display: block;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: none;
+        list-style: none;
+        padding: 0px;
+        text-align: center;
+        gap: 0;
+    }
+
+    nav.show ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items:center;
+        text-align: center;
+    }
+
+    footer .information,
+    footer .personal {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    footer p{
+        font-size: 12px;
+    }
+    .hero {
+        height: 35vh;
+    }
+
+    .hero img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .hero .submit-recipe {
+        position: absolute;
+        top: 40%;
+        padding: 10px 10px;
+    }
+    .hero .submit-recipe p{
+        font-size: 14px;
+    }
+
+    .hero .submit-recipe a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+
+      h2 {
+        font-size: 20px;    
+      }
+
+    .recipe {
+        width: 100%;
+        margin: 15px 0;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    div#recipes-container {
+        display: block;
+        padding: 10px;
+    }
+
+    .recipe img {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .recipe a {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #submit-recipe {
+        padding: 60px 10px;
+        font-size: 20px;
+    }
+
+    #recipe-tips h2 {
+        font-size: 20px;
+    }
+
+    .tips-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .image-container {
+        max-width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .tips-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .tips-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ideas h1 {
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #dropdown {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    #diet-type {
+        font-size: 15px;
+    }
+
+    .recipe-form {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .recipe-form input[type="text"],
+    .recipe-form input[type="number"],
+    .recipe-form select,
+    .recipe-form textarea {
+        font-size: 16px;
+    }
+
+    .recipe-form input[type="submit"] {
+        font-size: 18px;
+    }
+
+    #results {
+        padding: 20px;
+        margin-left: 0;
+    }
+
+    #results p {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+    .share-form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+    
+      .diet-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+    
+      .diet-cards .card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+    
+      .diet-cards .card button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+      }
+      .recipe-form label {
+        margin-bottom: 8px;
+        font-size: 12px;
+      }
+
+      .recipe-form input[type="submit"] {
+        margin-top: 10px;
+      }
+}

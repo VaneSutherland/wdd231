@@ -2,61 +2,108 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Project web page">
-  <meta name="author" content="Vanessa Sutherland">
-  <title>Nourishing Recipes: Eat Well, Feel Great</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nourishing Recipes homepage">
+    <meta name="author" content="Vanessa Sutherland">
+    <title>Nourishing Recipes</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles-small.css">
+    <script src="scripts/index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Nourishing Recipes: Eat Well, Feel Great">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <meta property="og:url" content="https://vanesutherland.github.io/wdd231/project">
 </head>
 
 <body>
-  <header>
-    <h1>Nourishing Recipes: Eat Well, Feel Great</h1>
+    <header>
+        <span>Nourishing Recipes: Eat Well, Feel Great</span>
+    </header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="share.html">Submit Your Recipe</a></li>
-        <li><a href="recipes.html">Recipes</a></li>
-
-      </ul>
+        <button id="hamburger-menu">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="share.html">Share</a></li>
+        </ul>
     </nav>
-  </header>
+    <main class="index">
 
-  <main>
-    <section id="random-recipes">
-      <h2>Random Recipes</h2>
-      <div id="recipes-container"></div>
-    </section>
+      <section class="hero">
+        <h2>Hero Section</h2>
+        <img src="images/food.webp" alt="food" loading="lazy">
+        <div class="submit-recipe">
+          <h2>Want to Share Your Recipe?</h2>
+          <p>We love new recipes! If you have a delicious recipe you'd like to share, click below to submit it:</p>
+            <a href="share.html">Share!</a>
+        </div>
+      </section>
 
-    <section id="submit-recipe">
-      <h2>Want to Share Your Recipe?</h2>
-      <p>We love new recipes! If you have a delicious recipe you'd like to share, click below to submit it:</p>
-      <a href="share.html">Submit Recipe</a>
-    </section>
 
-    <section id="recipe-tips">
-      <h2>Recipe Tips & Tricks</h2>
-      <ul>
-        <li><strong>Tip 1:</strong> Always use fresh ingredients for the best flavor.</li>
-        <li><strong>Tip 2:</strong> Don't forget to season your dish properly for that extra kick!</li>
-        <li><strong>Tip 3:</strong> Experiment with different herbs and spices to add variety.</li>
-      </ul>
-    </section>
+      <section id="random-recipes">
+        <h2>Recipes Ideas</h2>
+        <div id="random"></div>
+      </section>
+  
+  
+      <section id="recipe-tips">
+        <h2>Recipe Tips & Tricks</h2>
+        <div class="tips-container">
+          <div class="image-container">
+            <img src="images/seas.webp" alt="Recipe Tips Image" class="tips-image" loading="lazy">
+          </div>
+          <div class="tips-content">
+            <div class="tip">
+              <h3>Tip 1:</h3>
+              <p><strong>Always use fresh ingredients for the best flavor.</strong></p>
+            </div>
+            <div class="tip">
+              <h3>Tip 2:</h3>
+              <p><strong>Don't forget to season your dish properly for that extra kick!</strong></p>
+            </div>
+            <div class="tip">
+              <h3>Tip 3:</h3>
+              <p><strong>Experiment with different herbs and spices to add variety.</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    <footer>
+        <section class="information">
+            <h2>Information</h2>
+            <p>Nourishing Recipes</p>
+            <p>info@nourishing.org</p>
+            <p>(56) 938427305</p>
 
-  </main>
+        </section>
+        <section class="social">
+            <h2>Social Media</h2>
+            <a href="#"><img src="images/youtube.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/whatsapp.svg" alt="whatsapp icon"></a>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Nourishing Recipe All rights reserved.</p>
-  </footer>
+        <section class="personal">
+            <h2>Information</h2>
+            <p>WDD231 Class Project</p>
+            <p>Vanessa Sutherland</p>
+            <p>&copy 2025 Nourishing Recipes</p>
+        </section>
+    </footer>
+    <script src="srcipts/thankyou.js"></script>
+    <script src="srcipts/local.js"></script>
+    <script src="srcipts/index.js"></script>
+    <script src="srcipts/share.js"></script>
+    <script src="srcipts/app.js"></script>
 
-  <script src="srcipts/index.js"></script>
 </body>
 
 </html>

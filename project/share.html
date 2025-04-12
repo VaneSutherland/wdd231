@@ -1,57 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project web page">
+    <meta name="description" content="Nourishing Recipes">
     <meta name="author" content="Vanessa Sutherland">
-    <title>Nourishing Recipes: Eat Well, Feel Great</title>
+    <title>Nourishing Recipes</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles-small.css">
+    <script src="scripts/index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Nourishing Recipes: Eat Well, Feel Great">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <meta property="og:url" content="https://vanesutherland.github.io/wdd231/project">
 </head>
-<body>
 
-    <form id="recipe-form">
-        <label for="recipe-name">Nombre de la receta</label>
-        <input type="text" id="recipe-name" name="recipe-name" required>
-      
-        <label for="diet-type">Tipo de dieta</label>
-        <select id="diet-type" name="diet-type">
-          <option value="vegetarian">Vegetariana</option>
-          <option value="vegan">Vegana</option>
-          <option value="glutenFree">Sin gluten</option>
-          <option value="lowCarb">Baja en carbohidratos</option>
-          <option value="keto">Cetogénica</option>
-        </select>
-      
-        <label for="ingredients">Ingredientes</label>
-        <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
-      
-        <label for="instructions">Instrucciones</label>
-        <textarea id="instructions" name="instructions" rows="6" required></textarea>
-      
-        <label for="prep-time">Tiempo de preparación</label>
-        <input type="number" id="prep-time" name="prep-time" required>
-      
-        <label for="cook-time">Tiempo de cocción</label>
-        <input type="number" id="cook-time" name="cook-time" required>
-      
-        <label for="difficulty">Dificultad</label>
-        <select id="difficulty" name="difficulty">
-          <option value="easy">Fácil</option>
-          <option value="medium">Medio</option>
-          <option value="hard">Difícil</option>
-        </select>
-      
-        <label for="recipe-image">Imagen de la receta</label>
-        <input type="file" id="recipe-image" name="recipe-image" accept="image/*">
-      
-        <button type="submit">Enviar receta</button>
-      </form>
-  
+<body>
+    <header>
+        <span>Nourishing Recipes: Eat Well, Feel Great</span>
+    </header>
+    <nav>
+        <button id="hamburger-menu">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="share.html">Share</a></li>
+        </ul>
+    </nav>
+    <main class="share-form">
+
+        <form method="GET" action="thankyou.html" class="recipe-form">
+            <h1>Recipe Submission Form</h1>
+
+            <label>Recipe Name
+                <input type="text" name="recipe-name" required title="Enter the recipe name">
+            </label>
+
+            <label>Diet Type
+                <select name="diet-type" required>
+                    <option value="" disabled selected>Select a diet type</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="glutenFree">Gluten Free</option>
+                    <option value="lowCarb">Low Carb</option>
+                    <option value="keto">Keto</option>
+                </select>
+            </label>
+
+            <label>Ingredients
+                <textarea name="ingredients" required title="Enter ingredients for the recipe"></textarea>
+            </label>
+
+            <label>Instructions
+                <textarea name="instructions" required title="Enter the cooking instructions"></textarea>
+            </label>
+
+            <label>Preparation Time
+                <input type="number" name="prep-time" required title="Enter the preparation time in minutes">
+            </label>
+
+            <label>Cook Time
+                <input type="number" name="cook-time" required title="Enter the cook time in minutes">
+            </label>
+
+            <label>Difficulty
+                <select name="difficulty" required>
+                    <option value="" disabled selected>Select difficulty level</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </label>
+
+            <input type="submit" value="Submit Recipe">
+        </form>
+
+        <section class="diet-cards">
+            <h1>Not sure which diet to choose?</h1>
+            <div class="card">
+                <h2>Vegan</h2>
+                <button id="openButtonVegan">Learn More</button>
+            </div>
+            <div class="card">
+                <h2>Vegetarian</h2>
+                <button id="openButtonVegetarian">Learn More</button>
+            </div>
+            <div class="card">
+                <h2>Gluten-free</h2>
+                <button id="openButtonGlutenF">Learn More</button>
+            </div>
+            <div class="card">
+                <h2>Low Carb</h2>
+                <button id="openButtonLowCarb">Learn More</button>
+            </div>
+            <div class="card">
+                <h2>Keto</h2>
+                <button id="openButtonKeto">Learn More</button>
+            </div>
+        </section>
+
+        <dialog id="dialogBox">
+            <div></div>
+            <button id="closeButton">Close</button>
+        </dialog>
+
+        <aside id="sidebar">
+            <div id="visitMessage"></div>
+        </aside>
+
+    </main>
+    <footer>
+        <section class="information">
+            <h2>Information</h2>
+            <p>Nourishing Recipes</p>
+            <p>info@nourishing.org</p>
+            <p>(56) 938427305</p>
+
+        </section>
+        <section class="social">
+            <h2>Social Media</h2>
+            <a href="#"><img src="images/youtube.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/whatsapp.svg" alt="whatsapp icon"></a>
+        </section>
+
+        <section class="personal">
+            <h2>Information</h2>
+            <p>WDD231 Class Project</p>
+            <p>Vanessa Sutherland</p>
+            <p>&copy 2025 Nourishing Recipes</p>
+        </section>
+    </footer>
+    <script src="srcipts/thankyou.js"></script>
+    <script src="srcipts/local.js"></script>
+    <script src="srcipts/index.js"></script>
+    <script src="srcipts/share.js"></script>
+
 
 </body>
+
 </html>
